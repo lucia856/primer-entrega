@@ -1,0 +1,101 @@
+[
+  {
+    "category": "Wearable",
+    "title": "Apple Watch",
+    "description": "To make the best use of its size and location on your wrist, Apple Watch has all-new interactions and technologies. They let you do familiar things more quickly and conveniently. As well as some things that simply weren’t possible before. So using it is a whole new experience. One that’s more personal than ever.",
+    "price": 599,
+    "thumbnail": "watch-thumb.jpg",
+    "code": "WATCH001",
+    "stock": 50,
+    "id": "1691423433311",
+    "status": true
+  },
+  {
+    "category": "Smartphone",
+    "title": "iPhone 6",
+    "description": "iPhone 6 isn’t simply bigger — it’s better in every way. Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display. It’s one continuous form where hardware and software function in perfect unison, creating a new generation of iPhone that’s better by any measure.",
+    "price": 1000,
+    "thumbnail": "iphone-6-thumb.jpg",
+    "code": "IPHONE001",
+    "stock": 30,
+    "id": "1691423486880",
+    "status": true
+  },
+  {
+    "category": "Smart TV",
+    "title": "Apple TV",
+    "description": "Apple TV is a digital media player and a microconsole developed and sold by Apple Inc. It is a small network appliance and entertainment device that can receive digital data from a number of sources and stream it to capable TV for playing on the TV screen.",
+    "price": 250,
+    "thumbnail": "tv-thumb.jpg",
+    "code": "TV001",
+    "stock": 100,
+    "id": "1691423496559",
+    "status": true
+  },
+  {
+    "category": "Laptop",
+    "title": "Macbook pro",
+    "description": "The MacBook Pro (sometimes abbreviated MBP[1]) is a line of Macintosh portable computers introduced in January 2006 by Apple Inc., and now in its third generation. Replacing the PowerBook G4, the MacBook Pro was the second model, after the iMac, to be announced in the Apple–Intel transition. It is also the high-end model of the MacBook family and is currently produced with 13- and 15-inch screens, while a 17-inch version was also available in the past.",
+    "price": 2000,
+    "thumbnail": "macbook-pro-thumb.jpg",
+    "code": "MACBOOK001",
+    "stock": 20,
+    "id": "1691423506676",
+    "status": true
+  },
+  {
+    "category": "Laptop",
+    "title": "Macbook Air",
+    "description": "The MacBook Air is a line of Macintosh ultraportable notebook computers from Apple Inc. The Air was designed to balance both performance and portability, consisting of a full-sized keyboard design, a machined casing made of aluminum, and a very light and thin structure. The MacBook Air is available in two sizes, with the length of the diagonal display determining the model size: 13.3-inch and 11.6-inch (or 33.78 cm and 29.46 cm, respectively). A range of model choices with different specifications are produced by Apple, and as of 2011, all Air models use solid-state drive (SSD) storage and Intel Core i5 or i7 central processing units (CPUs).",
+    "price": 1200,
+    "thumbnail": "macbook-air-thumb.jpg",
+    "code": "MACBOOKAIR001",
+    "stock": 25,
+    "id": "1691423516308",
+    "status": true
+  },
+  {
+    "category": "Desktop",
+    "title": "iMac",
+    "description": "The iMac is a range of all-in-one Macintosh desktop computers designed and built by Apple Inc. It has been the primary part of Apple's consumer desktop offerings since its debut in August 1998 (shipped; introduced June 1998), and has evolved through six distinct forms.In its original form, the iMac G3 had a gumdrop or egg-shaped look, with a CRT monitor, mainly enclosed by a colored, translucent plastic case, which was refreshed early on with a sleeker design notable for its slot-loaded optical drive. The second major revision, the iMac G4, moved the design to a hemispherical base containing all the main components and an LCD monitor on a freely moving arm attached to it. The third and fourth major revisions, the iMac G5 and the Intel iMac respectively, placed all the components immediately behind the display, creating a slim unified design that tilts only up and down on a simple metal base. The fifth major revision shared the same form as the previous model, but was thinner and used anodized aluminum and a glass panel over the entire front.",
+    "price": 3000,
+    "thumbnail": "imac-thumb.jpg",
+    "code": "IMAC001",
+    "stock": 15,
+    "id": "1691423530768",
+    "status": true
+  },
+  {
+    "category": "Tablet",
+    "title": "iPad Air 2",
+    "description": "To create the astonishingly thin silhouette of iPad Air 2, we started by redesigning the Retina display, fusing what had been three layers into one. Not only did this make the display thinner, it made it better, with more vivid colors and greater contrast. Then we added an antireflective coating, giving iPad Air 2 the least reflective display of any tablet in the world.",
+    "price": 1200,
+    "thumbnail": "ipad-air-thumb.jpg",
+    "code": "IPADAIR001",
+    "stock": 40,
+    "id": "1691423579013",
+    "status": true
+  },
+  {
+    "category": "Accessories",
+    "title": "Apple EarPods",
+    "description": "Apple EarPods are designed to rest comfortably inside — and stay inside — a variety of ear shapes and sizes. Their overall audio quality is so superior, they rival high-end headphones that cost hundreds of dollars more. The improved remote lets you adjust volume and control music and video playback. And you can use the mic with Siri and VoiceOver.",
+    "price": 49,
+    "thumbnail": "earpods-thumb.jpg",
+    "code": "EARPODS001",
+    "stock": 75,
+    "id": "1691423591903",
+    "status": true
+  },
+  {
+    "category": "Accessories",
+    "title": "Apple Magic Mouse",
+    "description": "The Magic Mouse is a multi-touch mouse that was manufactured and sold by Apple from 2009 until being discontinued in 2021.",
+    "price": 99,
+    "thumbnail": "magic-mouse-thumb.jpg",
+    "code": "MAGICMOUSE001",
+    "stock": 60,
+    "id": "1691423601619",
+    "status": true
+  }
+]
