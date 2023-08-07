@@ -18,7 +18,7 @@ function writeProductsFile(data) {
 productsRouter.get('/', (req, res) => {
   const { limit } = req.query;
   let products = readProductsFile();
-  
+
   if (limit) {
     products = products.slice(0, limit);
   }
@@ -38,22 +38,64 @@ productsRouter.get('/:pid', (req, res) => {
   res.json(product);
 });
 
-productsRouter.post('/', (req, res) => {
-  const newProduct = req.body;
-  const products = readProductsFile();
+function productExistsByCode(products, code) {
+  return products.some((product) => product.code === code);
+}
 
-  if (!newProduct.title || !newProduct.description || !newProduct.code || !newProduct.price || !newProduct.stock || !newProduct.category) {
-    return res.status(400).json({ error: 'Missing required fields' });
+productsRouter.post('/', async (req, res) => {
+  try {
+    const newProduct = req.body;
+    const products = readProductsFile();
+
+    if (!newProduct.title || !newProduct.description || !newProduct.code || !newProduct.price || !newProduct.stock || !newProduct.category) {
+      return res.status(400).json({ error: 'Missing required fields' });
+    }
+    
+    if (productExistsByCode(products, newProduct.code)) {
+      return res.status(409).json({ error: 'Product with the same code already exists' });
+    }
+
+    newProduct.id = Date.now().toString();
+    newProduct.status = true;
+    products.push(newProduct);
+
+    writeProductsFile(products);
+
+    const cartId = req.body.cartId;
+
+    if (cartId) {
+      const carts = readCartsFile();
+      const cartIndex = carts.findIndex((c) => c.id === cartId);
+
+      if (cartIndex === -1) {
+        return res.status(404).json({ error: 'Cart not found' });
+      }
+
+      const productToAdd = products.find((product) => product.id === newProduct.id);
+
+      if (!productToAdd) {
+        return res.status(404).json({ error: 'Product not found' });
+      }
+
+      const cart = carts[cartIndex];
+      const productIndex = cart.products.findIndex((p) => p.product === newProduct.id);
+
+      if (productIndex === -1) {
+        cart.products.push({ product: newProduct.id, quantity: 1 });
+      } else {
+        cart.products[productIndex].quantity++;
+      }
+
+      writeCartsFile(carts);
+    }
+
+    res.json(newProduct);
+  } catch (error) {
+    console.error(error);
+    res.status(409).json({ error: 'The product code already exists' });
   }
-
-  newProduct.id = Date.now().toString();
-  newProduct.status = true; 
-  products.push(newProduct);
-
-  writeProductsFile(products);
-
-  res.json(newProduct);
 });
+
 
 productsRouter.put('/:pid', (req, res) => {
   const { pid } = req.params;
