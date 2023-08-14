@@ -26,7 +26,7 @@ cartsRouter.post('/', (req, res) => {
 
   writeCartsFile(carts);
 
-  res.json(newCart);
+  res.status(200).json(newCart);
 });
 
 cartsRouter.get('/:cid', (req, res) => {
@@ -38,7 +38,7 @@ cartsRouter.get('/:cid', (req, res) => {
     return res.status(404).json({ error: 'Cart not found' });
   }
 
-  res.json(cart.products);
+  res.status(200).json(cart.products);
 });
 
 cartsRouter.post('/:cid/product/:pid', (req, res) => {
@@ -62,7 +62,7 @@ cartsRouter.post('/:cid/product/:pid', (req, res) => {
 
   writeCartsFile(carts);
 
-  res.json({ message: 'Product added to the cart successfully'});
+  res.status(200).json({ message: 'Product added to the cart successfully'});
 });
 
 module.exports = cartsRouter;

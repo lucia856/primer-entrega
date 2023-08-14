@@ -23,7 +23,7 @@ productsRouter.get('/', (req, res) => {
     products = products.slice(0, limit);
   }
 
-  res.json(products);
+  res.status(200).json(products);
 });
 
 productsRouter.get('/:pid', (req, res) => {
@@ -35,7 +35,7 @@ productsRouter.get('/:pid', (req, res) => {
     return res.status(404).json({ error: 'Product Not Found' });
   }
 
-  res.json(product);
+  res.status(200).json(product);
 });
 
 function productExistsByCode(products, code) {
@@ -89,7 +89,7 @@ productsRouter.post('/', async (req, res) => {
       writeCartsFile(carts);
     }
 
-    res.json(newProduct);
+    res.status(200).json(newProduct);
   } catch (error) {
     console.error(error);
     res.status(409).json({ error: 'The product code already exists' });
@@ -116,7 +116,7 @@ productsRouter.put('/:pid', (req, res) => {
 
   writeProductsFile(products);
 
-  res.json(updatedProduct);
+  res.status(200).json(updatedProduct);
 });
 
 
@@ -133,7 +133,7 @@ productsRouter.delete('/:pid', (req, res) => {
 
   writeProductsFile(products);
 
-  res.json({ message: 'Product deleted successfully' });
+  res.status(200).json({ message: 'Product deleted successfully' });
 });
 
 module.exports = productsRouter;
